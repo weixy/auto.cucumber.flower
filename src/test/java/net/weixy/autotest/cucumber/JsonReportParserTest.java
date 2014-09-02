@@ -1,12 +1,10 @@
 package net.weixy.autotest.cucumber;
 
-import com.google.common.base.Charsets;
 import com.google.common.io.Resources;
 import net.weixy.autotest.cucumber.model.Feature;
 import org.junit.Test;
 
 import java.io.IOException;
-import java.net.URL;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -32,8 +30,11 @@ public class JsonReportParserTest {
     private List<String> getTestJsonReport() {
         List<String> jsonReports = new ArrayList<String>();
         jsonReports.add(Resources.getResource("net/weixy/autotest/cucumber/project1.json").getPath());
-        jsonReports.add(Resources.getResource("net/weixy/autotest/cucumber/project2.json").getPath());
-        jsonReports.add(Resources.getResource("net/weixy/autotest/cucumber/project3.json").getPath());
+        //jsonReports.add(Resources.getResource("net/weixy/autotest/cucumber/project2.json").getPath());
+        //jsonReports.add(Resources.getResource("net/weixy/autotest/cucumber/project3.json").getPath());
+        jsonReports.add(Resources.getResource("net/weixy/autotest/cucumber/axle.auto.success.json").getPath());
+        jsonReports.add(Resources.getResource("net/weixy/autotest/cucumber/axle.auto.error.json").getPath());
+
         return jsonReports;
     }
 }
