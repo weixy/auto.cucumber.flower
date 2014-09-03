@@ -1,0 +1,2635 @@
+[
+  {
+    "id": "add-new-products",
+    "tags": [
+      {
+        "name": "@AxleProduct",
+        "line": 1
+      }
+    ],
+    "description": "Add a new product in Axle and verify it whilst creating order.",
+    "name": "Add New Products",
+    "keyword": "Feature",
+    "line": 2,
+    "elements": [
+      {
+        "description": "",
+        "name": "",
+        "keyword": "Background",
+        "line": 5,
+        "steps": [
+          {
+            "result": {
+              "duration": 15301992313,
+              "status": "passed"
+            },
+            "name": "That I am logged into Axle",
+            "keyword": "Given ",
+            "line": 6,
+            "match": {
+              "location": "AxleCommonSteps.That_I_am_logged_into_Axle()"
+            }
+          },
+          {
+            "result": {
+              "duration": 1604912201,
+              "status": "passed"
+            },
+            "name": "I have hidden the side bar",
+            "keyword": "And ",
+            "line": 7,
+            "match": {
+              "location": "AxleCommonSteps.I_have_hidden_the_side_bar()"
+            }
+          },
+          {
+            "result": {
+              "duration": 1004497860,
+              "status": "passed"
+            },
+            "name": "I click the products menu option",
+            "keyword": "And ",
+            "line": 8,
+            "match": {
+              "location": "AddProductSteps.I_click_the_products_menu_option()"
+            }
+          }
+        ],
+        "type": "background"
+      },
+      {
+        "after": [
+          {
+            "result": {
+              "duration": 309178,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CleanupSteps.completion(Scenario)"
+            }
+          }
+        ],
+        "id": "add-new-products;add-a-new-product-and-edit-general-details",
+        "before": [
+          {
+            "result": {
+              "duration": 3108816815,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CleanupSteps.initialization(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 1023583,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CleanupSteps.initialization(Scenario)"
+            }
+          }
+        ],
+        "description": "",
+        "name": "Add a new product and edit general details",
+        "keyword": "Scenario",
+        "line": 10,
+        "steps": [
+          {
+            "result": {
+              "duration": 1382654896,
+              "status": "passed"
+            },
+            "name": "I try to add a new product",
+            "keyword": "When ",
+            "line": 11,
+            "match": {
+              "location": "AddProductSteps.I_try_to_add_a_new_product()"
+            }
+          },
+          {
+            "result": {
+              "duration": 7097253326,
+              "status": "passed"
+            },
+            "name": "I input details for new product:",
+            "keyword": "And ",
+            "line": 12,
+            "match": {
+              "location": "AddProductSteps.I_input_details_for_new_product(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Name",
+                  "Code",
+                  "Asset Class",
+                  "Category",
+                  "Component Pricing",
+                  "Publication"
+                ],
+                "line": 13
+              },
+              {
+                "cells": [
+                  "input",
+                  "input",
+                  "selectsearch",
+                  "selectsearch",
+                  "select",
+                  "selectsearch"
+                ],
+                "line": 14
+              },
+              {
+                "cells": [
+                  "TestProduct01",
+                  "IGOLD",
+                  "Yellow Print Listing",
+                  "Yellow Print",
+                  "Component",
+                  "Yellow Pages Print"
+                ],
+                "line": 15
+              }
+            ]
+          },
+          {
+            "result": {
+              "duration": 2948039811,
+              "status": "passed"
+            },
+            "name": "I input details for new product:",
+            "keyword": "And ",
+            "line": 16,
+            "match": {
+              "location": "AddProductSteps.I_input_details_for_new_product(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Finance Reference",
+                  "Product Margin",
+                  "Active",
+                  "Expected Delivery",
+                  "Price From",
+                  "Display Label"
+                ],
+                "line": 17
+              },
+              {
+                "cells": [
+                  "input",
+                  "input",
+                  "checkbox",
+                  "input",
+                  "input",
+                  "input"
+                ],
+                "line": 18
+              },
+              {
+                "cells": [
+                  "A123456",
+                  "20",
+                  "True",
+                  "24",
+                  "99.99",
+                  "Test Product 01"
+                ],
+                "line": 19
+              }
+            ]
+          },
+          {
+            "result": {
+              "duration": 565009810,
+              "status": "passed"
+            },
+            "name": "I upload a \"Logo\" file called \"TestLogo.jpg\"",
+            "keyword": "And ",
+            "line": 20,
+            "match": {
+              "arguments": [
+                {
+                  "val": "Logo",
+                  "offset": 12
+                },
+                {
+                  "val": "TestLogo.jpg",
+                  "offset": 31
+                }
+              ],
+              "location": "AddProductSteps.I_upload_a_file_called(String,String)"
+            }
+          },
+          {
+            "result": {
+              "duration": 4244325022,
+              "status": "passed"
+            },
+            "name": "I Save the new product",
+            "keyword": "And ",
+            "line": 21,
+            "match": {
+              "location": "AddProductSteps.I_Save_the_new_product()"
+            }
+          },
+          {
+            "result": {
+              "duration": 841605430,
+              "status": "passed"
+            },
+            "name": "I click detail tab \"Terms \u0026 conditions\"",
+            "keyword": "And ",
+            "line": 23,
+            "match": {
+              "arguments": [
+                {
+                  "val": "Terms \u0026 conditions",
+                  "offset": 20
+                }
+              ],
+              "location": "EditProductSteps.I_click(String)"
+            }
+          },
+          {
+            "result": {
+              "duration": 21444169166,
+              "status": "passed"
+            },
+            "name": "I set Terms \u0026 conditions:",
+            "keyword": "And ",
+            "line": 24,
+            "match": {
+              "location": "EditProductSteps.I_set_Terms_conditions(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Contract Terms",
+                  "Payment Options"
+                ],
+                "line": 25
+              },
+              {
+                "cells": [
+                  "selectmulti",
+                  "selectmulti"
+                ],
+                "line": 26
+              },
+              {
+                "cells": [
+                  "12 months",
+                  "monthly,3 monthly instalments,Lump sum"
+                ],
+                "line": 27
+              }
+            ]
+          },
+          {
+            "result": {
+              "duration": 1020484552,
+              "status": "passed"
+            },
+            "name": "I click detail tab \"Fields\"",
+            "keyword": "And ",
+            "line": 30,
+            "match": {
+              "arguments": [
+                {
+                  "val": "Fields",
+                  "offset": 20
+                }
+              ],
+              "location": "EditProductSteps.I_click(String)"
+            }
+          },
+          {
+            "result": {
+              "duration": 7280008028,
+              "status": "passed"
+            },
+            "name": "I select \"Yellow Category\" from content fields",
+            "keyword": "And ",
+            "line": 31,
+            "match": {
+              "arguments": [
+                {
+                  "val": "Yellow Category",
+                  "offset": 10
+                }
+              ],
+              "location": "EditProductSteps.I_select_from_content_fields(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Name",
+                  "Ordering Visible",
+                  "Editing Visible"
+                ],
+                "line": 32
+              },
+              {
+                "cells": [
+                  "input",
+                  "checkbox",
+                  "checkbox"
+                ],
+                "line": 33
+              },
+              {
+                "cells": [
+                  "Category",
+                  "True",
+                  "True"
+                ],
+                "line": 34
+              }
+            ]
+          },
+          {
+            "result": {
+              "duration": 997908607,
+              "status": "passed"
+            },
+            "name": "I click detail tab \"Pricing\"",
+            "keyword": "And ",
+            "line": 36,
+            "match": {
+              "arguments": [
+                {
+                  "val": "Pricing",
+                  "offset": 20
+                }
+              ],
+              "location": "EditProductSteps.I_click(String)"
+            }
+          },
+          {
+            "result": {
+              "duration": 12776144534,
+              "status": "passed"
+            },
+            "name": "I click add pricing model with details:",
+            "keyword": "And ",
+            "line": 37,
+            "match": {
+              "location": "EditProductSteps.I_click_add_pricing_model_with_details(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Name",
+                  "Unit Type"
+                ],
+                "line": 38
+              },
+              {
+                "cells": [
+                  "input",
+                  "select"
+                ],
+                "line": 39
+              },
+              {
+                "cells": [
+                  "Test Pricing Name",
+                  "Total"
+                ],
+                "line": 40
+              }
+            ]
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "name": "",
+        "keyword": "Background",
+        "line": 5,
+        "steps": [
+          {
+            "result": {
+              "duration": 12566515583,
+              "status": "passed"
+            },
+            "name": "That I am logged into Axle",
+            "keyword": "Given ",
+            "line": 6,
+            "match": {
+              "location": "AxleCommonSteps.That_I_am_logged_into_Axle()"
+            }
+          },
+          {
+            "result": {
+              "duration": 1625403332,
+              "status": "passed"
+            },
+            "name": "I have hidden the side bar",
+            "keyword": "And ",
+            "line": 7,
+            "match": {
+              "location": "AxleCommonSteps.I_have_hidden_the_side_bar()"
+            }
+          },
+          {
+            "result": {
+              "duration": 989195714,
+              "status": "passed"
+            },
+            "name": "I click the products menu option",
+            "keyword": "And ",
+            "line": 8,
+            "match": {
+              "location": "AddProductSteps.I_click_the_products_menu_option()"
+            }
+          }
+        ],
+        "type": "background"
+      },
+      {
+        "after": [
+          {
+            "result": {
+              "duration": 548979,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CleanupSteps.completion(Scenario)"
+            }
+          }
+        ],
+        "id": "add-new-products;verify-new-added-product-details",
+        "before": [
+          {
+            "result": {
+              "duration": 3385954,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CleanupSteps.initialization(Scenario)"
+            }
+          }
+        ],
+        "description": "",
+        "name": "Verify new added product details",
+        "keyword": "Scenario",
+        "line": 42,
+        "steps": [
+          {
+            "result": {
+              "duration": 3468016704,
+              "status": "passed"
+            },
+            "name": "I try to search a product",
+            "keyword": "Given ",
+            "line": 43,
+            "match": {
+              "location": "EditProductSteps.I_try_to_search_a_prodcut()"
+            }
+          },
+          {
+            "result": {
+              "duration": 3458095121,
+              "status": "passed"
+            },
+            "name": "I search for a product called \"TestProduct01\" via Product Search",
+            "keyword": "And ",
+            "line": 44,
+            "match": {
+              "arguments": [
+                {
+                  "val": "TestProduct01",
+                  "offset": 31
+                }
+              ],
+              "location": "SearchProductSteps.I_search_for_a_product_called_via_Product_Search(String)"
+            }
+          },
+          {
+            "result": {
+              "duration": 14875110076,
+              "status": "passed"
+            },
+            "name": "I assert the product \"TestProduct01\" information in search results:",
+            "keyword": "And ",
+            "line": 45,
+            "match": {
+              "arguments": [
+                {
+                  "val": "TestProduct01",
+                  "offset": 22
+                }
+              ],
+              "location": "VerificationSteps.I_assert_the_product_information_in_search_results(String,DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "Name",
+                  "Code",
+                  "Category",
+                  "Active"
+                ],
+                "line": 46
+              },
+              {
+                "cells": [
+                  "TestProduct01",
+                  "IGOLD",
+                  "Yellow Print",
+                  "True"
+                ],
+                "line": 47
+              }
+            ]
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "name": "",
+        "keyword": "Background",
+        "line": 5,
+        "steps": [
+          {
+            "result": {
+              "duration": 11576110564,
+              "status": "passed"
+            },
+            "name": "That I am logged into Axle",
+            "keyword": "Given ",
+            "line": 6,
+            "match": {
+              "location": "AxleCommonSteps.That_I_am_logged_into_Axle()"
+            }
+          },
+          {
+            "result": {
+              "duration": 1612420640,
+              "status": "passed"
+            },
+            "name": "I have hidden the side bar",
+            "keyword": "And ",
+            "line": 7,
+            "match": {
+              "location": "AxleCommonSteps.I_have_hidden_the_side_bar()"
+            }
+          },
+          {
+            "result": {
+              "duration": 905526778,
+              "status": "passed"
+            },
+            "name": "I click the products menu option",
+            "keyword": "And ",
+            "line": 8,
+            "match": {
+              "location": "AddProductSteps.I_click_the_products_menu_option()"
+            }
+          }
+        ],
+        "type": "background"
+      },
+      {
+        "after": [
+          {
+            "result": {
+              "duration": 278817,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CleanupSteps.completion(Scenario)"
+            }
+          }
+        ],
+        "id": "add-new-products;add-the-new-added-product-into-order",
+        "description": "",
+        "name": "Add the new added product into order",
+        "keyword": "Scenario",
+        "line": 49,
+        "steps": [
+          {
+            "result": {
+              "duration": 1351496640,
+              "status": "passed"
+            },
+            "name": "I click the customers menu option",
+            "keyword": "Given ",
+            "line": 50,
+            "match": {
+              "location": "AxleCommonSteps.I_click_the_customers_menu_option()"
+            }
+          },
+          {
+            "result": {
+              "duration": 1528798646,
+              "status": "passed"
+            },
+            "name": "I create an order for a customer called \"MercyAscot\"",
+            "keyword": "And ",
+            "line": 51,
+            "match": {
+              "arguments": [
+                {
+                  "val": "MercyAscot",
+                  "offset": 41
+                }
+              ],
+              "location": "CustomersSteps.I_create_an_order_for_a_customer_called(String)"
+            }
+          },
+          {
+            "result": {
+              "duration": 2256047255,
+              "status": "passed"
+            },
+            "name": "I search for a product called \"Test Product 01\"",
+            "keyword": "And ",
+            "line": 52,
+            "match": {
+              "arguments": [
+                {
+                  "val": "Test Product 01",
+                  "offset": 31
+                }
+              ],
+              "location": "CatalogsSteps.I_search_for_a_product_called(String)"
+            }
+          },
+          {
+            "result": {
+              "duration": 2006121330,
+              "status": "passed"
+            },
+            "name": "I add a product called \"Test Product 01\" to my order",
+            "keyword": "And ",
+            "line": 53,
+            "match": {
+              "arguments": [
+                {
+                  "val": "Test Product 01",
+                  "offset": 24
+                }
+              ],
+              "location": "CatalogsSteps.I_add_a_product_called_to_my_order(String)"
+            }
+          },
+          {
+            "result": {
+              "duration": 34558204324,
+              "status": "passed"
+            },
+            "name": "I select a category of \"Automotive Repairs\"",
+            "keyword": "And ",
+            "line": 54,
+            "match": {
+              "arguments": [
+                {
+                  "val": "Automotive Repairs",
+                  "offset": 24
+                }
+              ],
+              "location": "ItemDetailsSteps.I_select_a_category_of(String)"
+            }
+          },
+          {
+            "result": {
+              "duration": 545826105,
+              "status": "passed"
+            },
+            "name": "I click next on the item details page",
+            "keyword": "And ",
+            "line": 55,
+            "match": {
+              "location": "ItemDetailsSteps.I_click_next_on_the_item_details_page()"
+            }
+          },
+          {
+            "result": {
+              "duration": 3523480646,
+              "status": "passed"
+            },
+            "name": "I select the \"TestProduct01\" payment option of \"Lump sum\"",
+            "keyword": "And ",
+            "line": 56,
+            "match": {
+              "arguments": [
+                {
+                  "val": "TestProduct01",
+                  "offset": 14
+                },
+                {
+                  "val": "Lump sum",
+                  "offset": 48
+                }
+              ],
+              "location": "ProposeSteps.I_select_the_payment_option_of(String,String)"
+            }
+          },
+          {
+            "result": {
+              "duration": 5253566076,
+              "status": "passed"
+            },
+            "name": "I propose the current order",
+            "keyword": "And ",
+            "line": 57,
+            "match": {
+              "location": "OrderProcessSteps.I_propose_the_current_order()"
+            }
+          },
+          {
+            "result": {
+              "duration": 2946697862,
+              "status": "passed"
+            },
+            "name": "I set the acceptance type as \"Customer ECAP\"",
+            "keyword": "And ",
+            "line": 58,
+            "match": {
+              "arguments": [
+                {
+                  "val": "Customer ECAP",
+                  "offset": 30
+                }
+              ],
+              "location": "OrderProcessSteps.I_set_the_acceptance_type_as(String)"
+            }
+          },
+          {
+            "result": {
+              "duration": 5177405736,
+              "status": "passed"
+            },
+            "name": "I upload an acceptance file \"Test.pdf\"",
+            "keyword": "And ",
+            "line": 59,
+            "match": {
+              "arguments": [
+                {
+                  "val": "Test.pdf",
+                  "offset": 29
+                }
+              ],
+              "location": "OrderProcessSteps.I_upload_an_acceptance_file(String)"
+            }
+          },
+          {
+            "result": {
+              "duration": 8218982392,
+              "status": "passed"
+            },
+            "name": "I accept this order",
+            "keyword": "And ",
+            "line": 60,
+            "match": {
+              "location": "OrderProcessSteps.I_accept_this_order()"
+            }
+          },
+          {
+            "result": {
+              "duration": 3193930378,
+              "status": "passed"
+            },
+            "name": "I submit this order",
+            "keyword": "And ",
+            "line": 61,
+            "match": {
+              "location": "OrderProcessSteps.I_submit_this_order()"
+            }
+          },
+          {
+            "result": {
+              "duration": 3151293419,
+              "status": "passed"
+            },
+            "name": "I click view order button",
+            "keyword": "And ",
+            "line": 62,
+            "match": {
+              "location": "OrderProcessSteps.I_click_view_order_button()"
+            }
+          },
+          {
+            "result": {
+              "duration": 4090565623,
+              "status": "passed"
+            },
+            "name": "I cancel current order",
+            "keyword": "And ",
+            "line": 63,
+            "match": {
+              "location": "OrderProcessSteps.I_cancel_current_order()"
+            }
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "uri": "nz/co/yellow/emerge/axle/reg/AddNewProduct.feature"
+  },
+  {
+    "id": "clean-all-created-new-products",
+    "tags": [
+      {
+        "name": "@AxleProduct",
+        "line": 1
+      }
+    ],
+    "description": "",
+    "name": "clean all created new products",
+    "keyword": "Feature",
+    "line": 2,
+    "elements": [
+      {
+        "after": [
+          {
+            "result": {
+              "duration": 160782,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CleanupSteps.completion(Scenario)"
+            }
+          }
+        ],
+        "id": "clean-all-created-new-products;remove-all-created-new-products",
+        "before": [
+          {
+            "result": {
+              "duration": 2363611,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CleanupSteps.initialization(Scenario)"
+            }
+          }
+        ],
+        "description": "",
+        "name": "Remove all created new Products",
+        "keyword": "Scenario",
+        "line": 3,
+        "steps": [
+          {
+            "result": {
+              "duration": 11983544034,
+              "status": "passed"
+            },
+            "name": "That I am logged into Axle",
+            "keyword": "Given ",
+            "line": 4,
+            "match": {
+              "location": "AxleCommonSteps.That_I_am_logged_into_Axle()"
+            }
+          },
+          {
+            "result": {
+              "duration": 1600085680,
+              "status": "passed"
+            },
+            "name": "I have hidden the side bar",
+            "keyword": "And ",
+            "line": 5,
+            "match": {
+              "location": "AxleCommonSteps.I_have_hidden_the_side_bar()"
+            }
+          },
+          {
+            "result": {
+              "duration": 986411952,
+              "status": "passed"
+            },
+            "name": "I click the products menu option",
+            "keyword": "And ",
+            "line": 6,
+            "match": {
+              "location": "AddProductSteps.I_click_the_products_menu_option()"
+            }
+          },
+          {
+            "result": {
+              "duration": 3655005411,
+              "status": "passed"
+            },
+            "name": "I try to search a product",
+            "keyword": "Given ",
+            "line": 8,
+            "match": {
+              "location": "EditProductSteps.I_try_to_search_a_prodcut()"
+            }
+          },
+          {
+            "result": {
+              "duration": 3403503429,
+              "status": "passed"
+            },
+            "name": "I search for a product called \"TestProduct01\" via Product Search",
+            "keyword": "And ",
+            "line": 9,
+            "match": {
+              "arguments": [
+                {
+                  "val": "TestProduct01",
+                  "offset": 31
+                }
+              ],
+              "location": "SearchProductSteps.I_search_for_a_product_called_via_Product_Search(String)"
+            }
+          },
+          {
+            "result": {
+              "duration": 3681844605,
+              "status": "passed"
+            },
+            "name": "I try to delete the created product \"TestProduct01\"",
+            "keyword": "And ",
+            "line": 10,
+            "match": {
+              "arguments": [
+                {
+                  "val": "TestProduct01",
+                  "offset": 37
+                }
+              ],
+              "location": "DeleteProductSteps.I_try_to_delete_the_created_product(String)"
+            }
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "uri": "nz/co/yellow/emerge/axle/reg/AddNewProductClean.feature"
+  },
+  {
+    "id": "create-a-new-order-in-axle-and-process-it.",
+    "tags": [
+      {
+        "name": "@AxleOrder",
+        "line": 1
+      }
+    ],
+    "description": "Create new Order\nAdd Carts\nSubmit, Accept and Approve it.",
+    "name": "Create a new order in Axle and process it.",
+    "keyword": "Feature",
+    "line": 2,
+    "elements": [
+      {
+        "description": "",
+        "name": "",
+        "keyword": "Background",
+        "line": 6,
+        "steps": [
+          {
+            "result": {
+              "duration": 11917604889,
+              "status": "passed"
+            },
+            "name": "That I am logged into Axle",
+            "keyword": "Given ",
+            "line": 7,
+            "match": {
+              "location": "AxleCommonSteps.That_I_am_logged_into_Axle()"
+            }
+          }
+        ],
+        "type": "background"
+      },
+      {
+        "after": [
+          {
+            "result": {
+              "duration": 507031,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CleanupSteps.completion(Scenario)"
+            }
+          }
+        ],
+        "id": "create-a-new-order-in-axle-and-process-it.;create-a-new-order-for-customer;;2",
+        "tags": [
+          {
+            "name": "@AxleOrder",
+            "line": 1
+          }
+        ],
+        "before": [
+          {
+            "result": {
+              "duration": 1580371,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CleanupSteps.initialization(Scenario)"
+            }
+          },
+          {
+            "result": {
+              "duration": 1815088,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CleanupSteps.initialization(Scenario)"
+            }
+          }
+        ],
+        "description": "",
+        "name": "Create a new order for customer",
+        "keyword": "Scenario Outline",
+        "line": 89,
+        "steps": [
+          {
+            "result": {
+              "duration": 1036686334,
+              "status": "passed"
+            },
+            "name": "I click the customers menu option",
+            "keyword": "When ",
+            "line": 10,
+            "match": {
+              "location": "AxleCommonSteps.I_click_the_customers_menu_option()"
+            }
+          },
+          {
+            "result": {
+              "duration": 1008085066,
+              "status": "passed"
+            },
+            "name": "I search for a customer called \"MercyAscot\"",
+            "keyword": "And ",
+            "line": 11,
+            "match": {
+              "arguments": [
+                {
+                  "val": "MercyAscot",
+                  "offset": 32
+                }
+              ],
+              "location": "CustomersSteps.I_search_for_a_customer_called(String)"
+            },
+            "matchedColumns": [
+              0
+            ]
+          },
+          {
+            "result": {
+              "duration": 2573987932,
+              "status": "passed"
+            },
+            "name": "I view the customer called \"MercyAscot\"",
+            "keyword": "And ",
+            "line": 12,
+            "match": {
+              "arguments": [
+                {
+                  "val": "MercyAscot",
+                  "offset": 28
+                }
+              ],
+              "location": "CustomersSteps.I_view_the_customer_called(String)"
+            },
+            "matchedColumns": [
+              0
+            ]
+          },
+          {
+            "result": {
+              "duration": 3303591859,
+              "status": "passed"
+            },
+            "name": "I verify the customer name \"MercyAscot\" in working on info",
+            "keyword": "And ",
+            "line": 13,
+            "match": {
+              "arguments": [
+                {
+                  "val": "MercyAscot",
+                  "offset": 28
+                }
+              ],
+              "location": "CustomersSteps.I_verify_the_customer_name_in_working_on_info(String)"
+            },
+            "matchedColumns": [
+              0
+            ]
+          },
+          {
+            "result": {
+              "duration": 2036174915,
+              "status": "passed"
+            },
+            "name": "I verify the empty cart",
+            "keyword": "And ",
+            "line": 14,
+            "match": {
+              "location": "CustomersSteps.I_verify_the_empty_cart()"
+            }
+          },
+          {
+            "result": {
+              "duration": 509864225,
+              "status": "passed"
+            },
+            "name": "I click New Order button in user \"MercyAscot\" detail page",
+            "keyword": "And ",
+            "line": 15,
+            "match": {
+              "arguments": [
+                {
+                  "val": "MercyAscot",
+                  "offset": 34
+                }
+              ],
+              "location": "CustomersSteps.I_click_New_Order_button_in_user_detail_page(String)"
+            },
+            "matchedColumns": [
+              0
+            ]
+          },
+          {
+            "result": {
+              "duration": 3102278652,
+              "status": "passed"
+            },
+            "name": "I verify the cart info for customer \"MercyAscot\"",
+            "keyword": "And ",
+            "line": 16,
+            "match": {
+              "arguments": [
+                {
+                  "val": "MercyAscot",
+                  "offset": 37
+                }
+              ],
+              "location": "CustomersSteps.I_verify_the_cart_info_for_customer(String)"
+            },
+            "matchedColumns": [
+              0
+            ]
+          },
+          {
+            "result": {
+              "duration": 347330661,
+              "status": "passed"
+            },
+            "name": "I verify the initialized cart",
+            "keyword": "And ",
+            "line": 17,
+            "match": {
+              "location": "CustomersSteps.I_verify_the_initialized_cart()"
+            }
+          },
+          {
+            "result": {
+              "duration": 655382604,
+              "status": "passed"
+            },
+            "name": "I search for a product called \"Yellow Gold Listing\"",
+            "keyword": "And ",
+            "line": 18,
+            "match": {
+              "arguments": [
+                {
+                  "val": "Yellow Gold Listing",
+                  "offset": 31
+                }
+              ],
+              "location": "CatalogsSteps.I_search_for_a_product_called(String)"
+            },
+            "matchedColumns": [
+              1
+            ]
+          },
+          {
+            "result": {
+              "duration": 368124621,
+              "status": "passed"
+            },
+            "name": "I view the product \"Yellow Gold Listing\"",
+            "keyword": "And ",
+            "line": 20,
+            "match": {
+              "arguments": [
+                {
+                  "val": "Yellow Gold Listing",
+                  "offset": 20
+                }
+              ],
+              "location": "CustomersSteps.I_view_the_product(String)"
+            },
+            "matchedColumns": [
+              1
+            ]
+          },
+          {
+            "result": {
+              "duration": 582182101,
+              "status": "passed"
+            },
+            "name": "I verify the product title \"Yellow Gold Listing\"",
+            "keyword": "Then ",
+            "line": 21,
+            "match": {
+              "arguments": [
+                {
+                  "val": "Yellow Gold Listing",
+                  "offset": 28
+                }
+              ],
+              "location": "CatalogsSteps.I_verify_the_product_title(String)"
+            },
+            "matchedColumns": [
+              1
+            ]
+          },
+          {
+            "result": {
+              "duration": 167097811,
+              "status": "passed"
+            },
+            "name": "I verify the product sub-title \"Yellow Digital Listings \u003e Yellow digital listing products\"",
+            "keyword": "And ",
+            "line": 22,
+            "match": {
+              "arguments": [
+                {
+                  "val": "Yellow Digital Listings \u003e Yellow digital listing products",
+                  "offset": 32
+                }
+              ],
+              "location": "CatalogsSteps.I_verify_the_product_sub_title(String)"
+            }
+          },
+          {
+            "result": {
+              "duration": 166661339,
+              "status": "passed"
+            },
+            "name": "I verify the product meta info:",
+            "keyword": "And ",
+            "line": 23,
+            "match": {
+              "location": "CatalogsSteps.I_verify_the_product_meta_info(DataTable)"
+            },
+            "matchedColumns": [
+              5,
+              6
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Meta1",
+                  "Meta2"
+                ],
+                "line": 24
+              },
+              {
+                "cells": [
+                  "Price from: $ 110.00 (MONTH)",
+                  "*Expected delivery 96 hours"
+                ],
+                "line": 25
+              }
+            ]
+          },
+          {
+            "result": {
+              "duration": 8749216252,
+              "status": "passed"
+            },
+            "name": "I add the product to cart",
+            "keyword": "And ",
+            "line": 27,
+            "match": {
+              "location": "CatalogsSteps.I_add_the_product_to_cart()"
+            }
+          },
+          {
+            "result": {
+              "duration": 909114316,
+              "status": "passed"
+            },
+            "name": "I verify the order stage texts:",
+            "keyword": "Then ",
+            "line": 28,
+            "match": {
+              "location": "OrderProcessSteps.I_verify_the_order_stage_texts(DataTable)"
+            },
+            "rows": [
+              {
+                "cells": [
+                  "1",
+                  "2",
+                  "3",
+                  "4",
+                  "5"
+                ],
+                "line": 29
+              },
+              {
+                "cells": [
+                  "Select",
+                  "Item Details",
+                  "Propose",
+                  "Accept",
+                  "Checkout and Complete"
+                ],
+                "line": 30
+              }
+            ]
+          },
+          {
+            "result": {
+              "duration": 285434958,
+              "status": "passed"
+            },
+            "name": "I verify the current stage as \"Item Details\"",
+            "keyword": "And ",
+            "line": 31,
+            "match": {
+              "arguments": [
+                {
+                  "val": "Item Details",
+                  "offset": 31
+                }
+              ],
+              "location": "OrderProcessSteps.I_verify_the_current_stage_as(String)"
+            }
+          },
+          {
+            "result": {
+              "duration": 3089650148,
+              "status": "passed"
+            },
+            "name": "I verify the cart info for customer \"MercyAscot\"",
+            "keyword": "And ",
+            "line": 32,
+            "match": {
+              "arguments": [
+                {
+                  "val": "MercyAscot",
+                  "offset": 37
+                }
+              ],
+              "location": "CustomersSteps.I_verify_the_cart_info_for_customer(String)"
+            },
+            "matchedColumns": [
+              0
+            ]
+          },
+          {
+            "result": {
+              "duration": 112363576,
+              "status": "passed"
+            },
+            "name": "I verify the base price of product \"$110.00\"",
+            "keyword": "And ",
+            "line": 33,
+            "match": {
+              "arguments": [
+                {
+                  "val": "$110.00",
+                  "offset": 36
+                }
+              ],
+              "location": "OrderProcessSteps.I_verify_the_base_price_of_product(String)"
+            },
+            "matchedColumns": [
+              4
+            ]
+          },
+          {
+            "result": {
+              "duration": 1590178112,
+              "status": "passed"
+            },
+            "name": "I have hidden the side bar",
+            "keyword": "And ",
+            "line": 35,
+            "match": {
+              "location": "AxleCommonSteps.I_have_hidden_the_side_bar()"
+            }
+          },
+          {
+            "result": {
+              "duration": 1805869996,
+              "status": "passed"
+            },
+            "name": "I select a category of \"Animal Health\"",
+            "keyword": "And ",
+            "line": 36,
+            "match": {
+              "arguments": [
+                {
+                  "val": "Animal Health",
+                  "offset": 24
+                }
+              ],
+              "location": "ItemDetailsSteps.I_select_a_category_of(String)"
+            },
+            "matchedColumns": [
+              2
+            ]
+          },
+          {
+            "result": {
+              "duration": 19971041598,
+              "status": "passed"
+            },
+            "name": "I add a component with number \"1\" and type \"Enhanced Content (1 can be added)\"",
+            "keyword": "And ",
+            "line": 37,
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 31
+                },
+                {
+                  "val": "Enhanced Content (1 can be added)",
+                  "offset": 44
+                }
+              ],
+              "location": "OrderProcessSteps.I_add_a_component_with_number(String,String)"
+            }
+          },
+          {
+            "result": {
+              "duration": 21435501068,
+              "status": "passed"
+            },
+            "name": "I add \"1\" section of \"Images\" in component",
+            "keyword": "And ",
+            "line": 38,
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 7
+                },
+                {
+                  "val": "Images",
+                  "offset": 22
+                }
+              ],
+              "location": "OrderProcessSteps.I_add_section_of_in_component(String,String)"
+            }
+          },
+          {
+            "result": {
+              "duration": 5377843236,
+              "status": "passed"
+            },
+            "name": "I upload a file called \"TestLogo.jpg\" to component\u0027s \"Images\" section \"1\"",
+            "keyword": "And ",
+            "line": 39,
+            "match": {
+              "arguments": [
+                {
+                  "val": "TestLogo.jpg",
+                  "offset": 24
+                },
+                {
+                  "val": "Images",
+                  "offset": 54
+                },
+                {
+                  "val": "1",
+                  "offset": 71
+                }
+              ],
+              "location": "OrderProcessSteps.I_upload_a_file_called_to_components_section(String,String,String)"
+            }
+          },
+          {
+            "result": {
+              "duration": 7850617981,
+              "status": "passed"
+            },
+            "name": "I add \"1\" section of \"PDF / Coupon\" in component",
+            "keyword": "And ",
+            "line": 40,
+            "match": {
+              "arguments": [
+                {
+                  "val": "1",
+                  "offset": 7
+                },
+                {
+                  "val": "PDF / Coupon",
+                  "offset": 22
+                }
+              ],
+              "location": "OrderProcessSteps.I_add_section_of_in_component(String,String)"
+            }
+          },
+          {
+            "result": {
+              "duration": 5618366607,
+              "status": "passed"
+            },
+            "name": "I upload a file called \"Test.pdf\" to component\u0027s \"PDF / Coupon\" section \"1\"",
+            "keyword": "And ",
+            "line": 41,
+            "match": {
+              "arguments": [
+                {
+                  "val": "Test.pdf",
+                  "offset": 24
+                },
+                {
+                  "val": "PDF / Coupon",
+                  "offset": 50
+                },
+                {
+                  "val": "1",
+                  "offset": 73
+                }
+              ],
+              "location": "OrderProcessSteps.I_upload_a_file_called_to_components_section(String,String,String)"
+            }
+          },
+          {
+            "result": {
+              "duration": 1578732193,
+              "status": "passed"
+            },
+            "name": "I have shown the side bar",
+            "keyword": "And ",
+            "line": 42,
+            "match": {
+              "location": "AxleCommonSteps.I_have_shown_the_side_bar()"
+            }
+          },
+          {
+            "result": {
+              "duration": 10253712913,
+              "status": "passed"
+            },
+            "name": "I click Next on Product Configure page",
+            "keyword": "And ",
+            "line": 43,
+            "match": {
+              "location": "OrderProcessSteps.I_click_next_on_product_configure_page()"
+            }
+          },
+          {
+            "result": {
+              "duration": 227157971,
+              "status": "passed"
+            },
+            "name": "I verify the current stage as \"Propose\"",
+            "keyword": "And ",
+            "line": 45,
+            "match": {
+              "arguments": [
+                {
+                  "val": "Propose",
+                  "offset": 31
+                }
+              ],
+              "location": "OrderProcessSteps.I_verify_the_current_stage_as(String)"
+            }
+          },
+          {
+            "result": {
+              "duration": 1529175959,
+              "status": "passed"
+            },
+            "name": "I verify the Order Details",
+            "keyword": "And ",
+            "line": 46,
+            "match": {
+              "location": "OrderProcessSteps.I_verify_the_Order_Details()"
+            }
+          },
+          {
+            "result": {
+              "duration": 1175722907,
+              "status": "passed"
+            },
+            "name": "I verify the Sales Person",
+            "keyword": "And ",
+            "line": 47,
+            "match": {
+              "location": "OrderProcessSteps.I_verify_the_Sales_Person()"
+            }
+          },
+          {
+            "result": {
+              "duration": 1519834000,
+              "status": "passed"
+            },
+            "name": "I select the billing account \"THE ASCOT HOSPITAL \u0026 CLINICS LTD (510435041)\" for customer \"MercyAscot\"",
+            "keyword": "And ",
+            "line": 48,
+            "match": {
+              "arguments": [
+                {
+                  "val": "THE ASCOT HOSPITAL \u0026 CLINICS LTD (510435041)",
+                  "offset": 30
+                },
+                {
+                  "val": "MercyAscot",
+                  "offset": 90
+                }
+              ],
+              "location": "OrderProcessSteps.I_select_customer_s_billing_account(String,String)"
+            },
+            "matchedColumns": [
+              0,
+              9
+            ]
+          },
+          {
+            "result": {
+              "duration": 3182211555,
+              "status": "passed"
+            },
+            "name": "I set \"Yellow Gold Listing\" contract term as \"10 months (Minimum*)\"",
+            "keyword": "And ",
+            "line": 49,
+            "match": {
+              "arguments": [
+                {
+                  "val": "Yellow Gold Listing",
+                  "offset": 7
+                },
+                {
+                  "val": "10 months (Minimum*)",
+                  "offset": 46
+                }
+              ],
+              "location": "OrderProcessSteps.I_set_contract_termn_as(String,String)"
+            },
+            "matchedColumns": [
+              1,
+              7
+            ]
+          },
+          {
+            "result": {
+              "duration": 5213987199,
+              "status": "passed"
+            },
+            "name": "I click reprice button of product \"Yellow Gold Listing\"",
+            "keyword": "And ",
+            "line": 50,
+            "match": {
+              "arguments": [
+                {
+                  "val": "Yellow Gold Listing",
+                  "offset": 35
+                }
+              ],
+              "location": "OrderProcessSteps.I_click_reprice_button_of_product(String)"
+            },
+            "matchedColumns": [
+              1
+            ]
+          },
+          {
+            "result": {
+              "duration": 2871549126,
+              "status": "passed"
+            },
+            "name": "I verify the price calculation info of \"Yellow Gold Listing\"",
+            "keyword": "And ",
+            "line": 51,
+            "match": {
+              "arguments": [
+                {
+                  "val": "Yellow Gold Listing",
+                  "offset": 40
+                }
+              ],
+              "location": "OrderProcessSteps.I_verify_the_price_calculation_info(String)"
+            },
+            "matchedColumns": [
+              1
+            ]
+          },
+          {
+            "result": {
+              "duration": 2995960602,
+              "status": "passed"
+            },
+            "name": "I set \"Yellow Gold Listing\" payment option as \"Monthly\"",
+            "keyword": "And ",
+            "line": 52,
+            "match": {
+              "arguments": [
+                {
+                  "val": "Yellow Gold Listing",
+                  "offset": 7
+                },
+                {
+                  "val": "Monthly",
+                  "offset": 47
+                }
+              ],
+              "location": "OrderProcessSteps.I_set_payment_option_as(String,String)"
+            },
+            "matchedColumns": [
+              1,
+              8
+            ]
+          },
+          {
+            "result": {
+              "duration": 5829934714,
+              "status": "passed"
+            },
+            "name": "I click apply options to all button of product \"Yellow Gold Listing\"",
+            "keyword": "And ",
+            "line": 53,
+            "match": {
+              "arguments": [
+                {
+                  "val": "Yellow Gold Listing",
+                  "offset": 48
+                }
+              ],
+              "location": "OrderProcessSteps.I_click_apply_options_to_all_button_of_product(String)"
+            },
+            "matchedColumns": [
+              1
+            ]
+          },
+          {
+            "result": {
+              "duration": 623363428,
+              "status": "passed"
+            },
+            "name": "I add art notes for current product \"Art notes blah blah\";",
+            "keyword": "And ",
+            "line": 55,
+            "match": {
+              "arguments": [
+                {
+                  "val": "Art notes blah blah",
+                  "offset": 37
+                }
+              ],
+              "location": "OrderProcessSteps.I_add_art_notes_for_current_product_(String)"
+            }
+          },
+          {
+            "result": {
+              "duration": 731482703,
+              "status": "passed"
+            },
+            "name": "I add admin notes for current product \"Admin notes .... \";",
+            "keyword": "And ",
+            "line": 56,
+            "match": {
+              "arguments": [
+                {
+                  "val": "Admin notes .... ",
+                  "offset": 39
+                }
+              ],
+              "location": "OrderProcessSteps.I_add_admin_notes_for_current_product_(String)"
+            }
+          },
+          {
+            "result": {
+              "duration": 6819712605,
+              "status": "passed"
+            },
+            "name": "I verify the order total price",
+            "keyword": "And ",
+            "line": 57,
+            "match": {
+              "location": "OrderProcessSteps.I_verify_the_order_total_price()"
+            }
+          },
+          {
+            "result": {
+              "duration": 3327358229,
+              "status": "passed"
+            },
+            "name": "I save the current order",
+            "keyword": "And ",
+            "line": 58,
+            "match": {
+              "location": "OrderProcessSteps.I_save_the_current_order()"
+            }
+          },
+          {
+            "result": {
+              "duration": 330498185,
+              "status": "passed"
+            },
+            "name": "I verify the message \"The order was saved.\"",
+            "keyword": "And ",
+            "line": 59,
+            "match": {
+              "arguments": [
+                {
+                  "val": "The order was saved.",
+                  "offset": 22
+                }
+              ],
+              "location": "OrderProcessSteps.I_verify_the_message(String)"
+            }
+          },
+          {
+            "result": {
+              "duration": 4575375395,
+              "status": "passed"
+            },
+            "name": "I propose the current order",
+            "keyword": "And ",
+            "line": 60,
+            "match": {
+              "location": "OrderProcessSteps.I_propose_the_current_order()"
+            }
+          },
+          {
+            "result": {
+              "duration": 222936592,
+              "status": "passed"
+            },
+            "name": "I verify the current stage as \"Accept\"",
+            "keyword": "And ",
+            "line": 62,
+            "match": {
+              "arguments": [
+                {
+                  "val": "Accept",
+                  "offset": 31
+                }
+              ],
+              "location": "OrderProcessSteps.I_verify_the_current_stage_as(String)"
+            }
+          },
+          {
+            "result": {
+              "duration": 1617802092,
+              "status": "passed"
+            },
+            "name": "I verify the Order Details",
+            "keyword": "And ",
+            "line": 63,
+            "match": {
+              "location": "OrderProcessSteps.I_verify_the_Order_Details()"
+            }
+          },
+          {
+            "result": {
+              "duration": 1150966950,
+              "status": "passed"
+            },
+            "name": "I verify the Sales Person",
+            "keyword": "And ",
+            "line": 64,
+            "match": {
+              "location": "OrderProcessSteps.I_verify_the_Sales_Person()"
+            }
+          },
+          {
+            "result": {
+              "duration": 3375736669,
+              "status": "passed"
+            },
+            "name": "I set the acceptance type as \"Customer ECAP\"",
+            "keyword": "And ",
+            "line": 66,
+            "match": {
+              "arguments": [
+                {
+                  "val": "Customer ECAP",
+                  "offset": 30
+                }
+              ],
+              "location": "OrderProcessSteps.I_set_the_acceptance_type_as(String)"
+            },
+            "comments": [
+              {
+                "value": "#And I verify the proposal download link",
+                "line": 65
+              }
+            ]
+          },
+          {
+            "result": {
+              "duration": 5662360981,
+              "status": "passed"
+            },
+            "name": "I upload an acceptance file \"Test.pdf\"",
+            "keyword": "And ",
+            "line": 67,
+            "match": {
+              "arguments": [
+                {
+                  "val": "Test.pdf",
+                  "offset": 29
+                }
+              ],
+              "location": "OrderProcessSteps.I_upload_an_acceptance_file(String)"
+            }
+          },
+          {
+            "result": {
+              "duration": 9409706343,
+              "status": "passed"
+            },
+            "name": "I accept this order",
+            "keyword": "And ",
+            "line": 68,
+            "match": {
+              "location": "OrderProcessSteps.I_accept_this_order()"
+            }
+          },
+          {
+            "result": {
+              "duration": 234526176,
+              "status": "passed"
+            },
+            "name": "I verify the current stage as \"Checkout and Complete\"",
+            "keyword": "And ",
+            "line": 70,
+            "match": {
+              "arguments": [
+                {
+                  "val": "Checkout and Complete",
+                  "offset": 31
+                }
+              ],
+              "location": "OrderProcessSteps.I_verify_the_current_stage_as(String)"
+            }
+          },
+          {
+            "result": {
+              "duration": 403556605,
+              "status": "passed"
+            },
+            "name": "I verify the check out summary price",
+            "keyword": "And ",
+            "line": 71,
+            "match": {
+              "location": "OrderProcessSteps.I_verify_the_check_out_summary_price()"
+            }
+          },
+          {
+            "result": {
+              "duration": 3207401573,
+              "status": "passed"
+            },
+            "name": "I submit this order",
+            "keyword": "And ",
+            "line": 72,
+            "match": {
+              "location": "OrderProcessSteps.I_submit_this_order()"
+            }
+          },
+          {
+            "result": {
+              "duration": 327575890,
+              "status": "passed"
+            },
+            "name": "I verify the order price in complete page",
+            "keyword": "And ",
+            "line": 73,
+            "match": {
+              "location": "OrderProcessSteps.I_verify_the_order_price_in_complete_page()"
+            }
+          },
+          {
+            "result": {
+              "duration": 3202256611,
+              "status": "passed"
+            },
+            "name": "I click view order button",
+            "keyword": "And ",
+            "line": 74,
+            "match": {
+              "location": "OrderProcessSteps.I_click_view_order_button()"
+            }
+          },
+          {
+            "result": {
+              "duration": 3954642591,
+              "status": "passed"
+            },
+            "name": "I select the order provisioning tab",
+            "keyword": "And ",
+            "line": 76,
+            "match": {
+              "location": "OrderDetailSteps.I_select_the_order_provisioning_tab()"
+            }
+          },
+          {
+            "result": {
+              "duration": 124187966,
+              "status": "passed"
+            },
+            "name": "There should be an \"Animal Health\" classification",
+            "keyword": "And ",
+            "line": 77,
+            "match": {
+              "arguments": [
+                {
+                  "val": "Animal Health",
+                  "offset": 20
+                }
+              ],
+              "location": "OrderDetailSteps.There_should_be_an_order_item(String)"
+            },
+            "matchedColumns": [
+              2
+            ]
+          },
+          {
+            "result": {
+              "duration": 2362792598,
+              "status": "passed"
+            },
+            "name": "The \"Animal Health\" should contain a \"Yellow Gold Listing\" order item",
+            "keyword": "And ",
+            "line": 78,
+            "match": {
+              "arguments": [
+                {
+                  "val": "Animal Health",
+                  "offset": 5
+                },
+                {
+                  "val": "Yellow Gold Listing",
+                  "offset": 38
+                }
+              ],
+              "location": "OrderDetailSteps.The_should_contain_a_product(String,String)"
+            },
+            "matchedColumns": [
+              1,
+              2
+            ]
+          },
+          {
+            "result": {
+              "duration": 2351583674,
+              "status": "passed"
+            },
+            "name": "The \"Animal Health\" \"Yellow Gold Listing\" order item should not be complete",
+            "keyword": "And ",
+            "line": 79,
+            "match": {
+              "arguments": [
+                {
+                  "val": "Animal Health",
+                  "offset": 5
+                },
+                {
+                  "val": "Yellow Gold Listing",
+                  "offset": 21
+                }
+              ],
+              "location": "OrderDetailSteps.The_product_should_not_be_complete(String,String)"
+            },
+            "matchedColumns": [
+              1,
+              2
+            ]
+          },
+          {
+            "result": {
+              "duration": 2455945972,
+              "status": "passed"
+            },
+            "name": "I click complete on the \"Animal Health\" \"Yellow Gold Listing\" order item",
+            "keyword": "And ",
+            "line": 80,
+            "match": {
+              "arguments": [
+                {
+                  "val": "Animal Health",
+                  "offset": 25
+                },
+                {
+                  "val": "Yellow Gold Listing",
+                  "offset": 41
+                }
+              ],
+              "location": "OrderDetailSteps.I_click_complete_on_the_order_item(String,String)"
+            },
+            "matchedColumns": [
+              1,
+              2
+            ]
+          },
+          {
+            "result": {
+              "duration": 12506680073,
+              "status": "passed"
+            },
+            "name": "The \"Animal Health\" \"Yellow Gold Listing\" order item should be complete",
+            "keyword": "Then ",
+            "line": 81,
+            "match": {
+              "arguments": [
+                {
+                  "val": "Animal Health",
+                  "offset": 5
+                },
+                {
+                  "val": "Yellow Gold Listing",
+                  "offset": 21
+                }
+              ],
+              "location": "OrderDetailSteps.The_order_item_should_be_complete(String,String)"
+            },
+            "matchedColumns": [
+              1,
+              2
+            ]
+          },
+          {
+            "result": {
+              "duration": 2385908686,
+              "status": "passed"
+            },
+            "name": "The \"Animal Health\" should contain a \"Enhanced Content\" order item",
+            "keyword": "And ",
+            "line": 82,
+            "match": {
+              "arguments": [
+                {
+                  "val": "Animal Health",
+                  "offset": 5
+                },
+                {
+                  "val": "Enhanced Content",
+                  "offset": 38
+                }
+              ],
+              "location": "OrderDetailSteps.The_should_contain_a_product(String,String)"
+            },
+            "matchedColumns": [
+              2,
+              3
+            ]
+          },
+          {
+            "result": {
+              "duration": 2319525744,
+              "status": "passed"
+            },
+            "name": "The \"Animal Health\" \"Enhanced Content\" order item should not be complete",
+            "keyword": "And ",
+            "line": 83,
+            "match": {
+              "arguments": [
+                {
+                  "val": "Animal Health",
+                  "offset": 5
+                },
+                {
+                  "val": "Enhanced Content",
+                  "offset": 21
+                }
+              ],
+              "location": "OrderDetailSteps.The_product_should_not_be_complete(String,String)"
+            },
+            "matchedColumns": [
+              2,
+              3
+            ]
+          },
+          {
+            "result": {
+              "duration": 2483850365,
+              "status": "passed"
+            },
+            "name": "I click complete on the \"Animal Health\" \"Enhanced Content\" order item",
+            "keyword": "And ",
+            "line": 84,
+            "match": {
+              "arguments": [
+                {
+                  "val": "Animal Health",
+                  "offset": 25
+                },
+                {
+                  "val": "Enhanced Content",
+                  "offset": 41
+                }
+              ],
+              "location": "OrderDetailSteps.I_click_complete_on_the_order_item(String,String)"
+            },
+            "matchedColumns": [
+              2,
+              3
+            ]
+          },
+          {
+            "result": {
+              "duration": 12409988951,
+              "status": "passed"
+            },
+            "name": "The \"Animal Health\" \"Enhanced Content\" order item should be complete",
+            "keyword": "Then ",
+            "line": 85,
+            "match": {
+              "arguments": [
+                {
+                  "val": "Animal Health",
+                  "offset": 5
+                },
+                {
+                  "val": "Enhanced Content",
+                  "offset": 21
+                }
+              ],
+              "location": "OrderDetailSteps.The_order_item_should_be_complete(String,String)"
+            },
+            "matchedColumns": [
+              2,
+              3
+            ]
+          }
+        ],
+        "type": "scenario"
+      },
+      {
+        "description": "",
+        "name": "",
+        "keyword": "Background",
+        "line": 6,
+        "steps": [
+          {
+            "result": {
+              "duration": 11859005526,
+              "status": "passed"
+            },
+            "name": "That I am logged into Axle",
+            "keyword": "Given ",
+            "line": 7,
+            "match": {
+              "location": "AxleCommonSteps.That_I_am_logged_into_Axle()"
+            }
+          }
+        ],
+        "type": "background"
+      },
+      {
+        "after": [
+          {
+            "result": {
+              "duration": 115109,
+              "status": "passed"
+            },
+            "match": {
+              "location": "CleanupSteps.completion(Scenario)"
+            }
+          }
+        ],
+        "id": "create-a-new-order-in-axle-and-process-it.;open-a-existing-customer-and-cancel-the-provisioning-products.;;2",
+        "tags": [
+          {
+            "name": "@AxleOrder",
+            "line": 1
+          }
+        ],
+        "description": "",
+        "name": "Open a existing customer and cancel the provisioning products.",
+        "keyword": "Scenario Outline",
+        "line": 119,
+        "steps": [
+          {
+            "result": {
+              "duration": 1024703082,
+              "status": "passed"
+            },
+            "name": "I click the customers menu option",
+            "keyword": "When ",
+            "line": 92,
+            "match": {
+              "location": "AxleCommonSteps.I_click_the_customers_menu_option()"
+            }
+          },
+          {
+            "result": {
+              "duration": 990682144,
+              "status": "passed"
+            },
+            "name": "I search for a customer called \"MercyAscot\"",
+            "keyword": "And ",
+            "line": 93,
+            "match": {
+              "arguments": [
+                {
+                  "val": "MercyAscot",
+                  "offset": 32
+                }
+              ],
+              "location": "CustomersSteps.I_search_for_a_customer_called(String)"
+            },
+            "matchedColumns": [
+              0
+            ]
+          },
+          {
+            "result": {
+              "duration": 2506805229,
+              "status": "passed"
+            },
+            "name": "I view the customer called \"MercyAscot\"",
+            "keyword": "And ",
+            "line": 94,
+            "match": {
+              "arguments": [
+                {
+                  "val": "MercyAscot",
+                  "offset": 28
+                }
+              ],
+              "location": "CustomersSteps.I_view_the_customer_called(String)"
+            },
+            "matchedColumns": [
+              0
+            ]
+          },
+          {
+            "result": {
+              "duration": 5826432005,
+              "status": "passed"
+            },
+            "name": "I click tab \"Existing Products\"",
+            "keyword": "And ",
+            "line": 95,
+            "match": {
+              "arguments": [
+                {
+                  "val": "Existing Products",
+                  "offset": 13
+                }
+              ],
+              "location": "CustomersSteps.I_click_tab(String)"
+            }
+          },
+          {
+            "result": {
+              "duration": 4342927668,
+              "status": "passed"
+            },
+            "name": "I search for a product \"Gold Priority Listing\" with filter \"Equals\"",
+            "keyword": "And ",
+            "line": 96,
+            "match": {
+              "arguments": [
+                {
+                  "val": "Gold Priority Listing",
+                  "offset": 24
+                },
+                {
+                  "val": "Equals",
+                  "offset": 60
+                }
+              ],
+              "location": "CustomersSteps.I_search_for_a_product_with_filter(String,String)"
+            }
+          },
+          {
+            "result": {
+              "duration": 1010929220,
+              "status": "passed"
+            },
+            "name": "I expand product section \"Digital\"",
+            "keyword": "And ",
+            "line": 97,
+            "match": {
+              "arguments": [
+                {
+                  "val": "Digital",
+                  "offset": 26
+                }
+              ],
+              "location": "CustomersSteps.I_expand_product_section(String)"
+            }
+          },
+          {
+            "result": {
+              "duration": 10399698489,
+              "status": "passed"
+            },
+            "name": "I cancel existing \"Digital\" products with following criteria:",
+            "keyword": "And ",
+            "line": 98,
+            "match": {
+              "arguments": [
+                {
+                  "val": "Digital",
+                  "offset": 19
+                }
+              ],
+              "location": "CustomersSteps.I_cancel_existing_products_with_following_criteria(String,DataTable)"
+            },
+            "matchedColumns": [
+              1,
+              2
+            ],
+            "rows": [
+              {
+                "cells": [
+                  "Product",
+                  "Classification"
+                ],
+                "line": 99
+              },
+              {
+                "cells": [
+                  "Gold Priority Listing (IGOLD)",
+                  "Animal Health"
+                ],
+                "line": 100
+              }
+            ]
+          },
+          {
+            "result": {
+              "duration": 4703783095,
+              "status": "passed"
+            },
+            "name": "I choose cancellation reason as \"Cutting back on costs\" for all",
+            "keyword": "And ",
+            "line": 101,
+            "match": {
+              "arguments": [
+                {
+                  "val": "Cutting back on costs",
+                  "offset": 33
+                }
+              ],
+              "location": "CustomersSteps.I_choose_cancellation_reason_as_for_all(String)"
+            },
+            "matchedColumns": [
+              3
+            ]
+          },
+          {
+            "result": {
+              "duration": 4006638839,
+              "status": "passed"
+            },
+            "name": "I propose the current order",
+            "keyword": "And ",
+            "line": 102,
+            "match": {
+              "location": "OrderProcessSteps.I_propose_the_current_order()"
+            }
+          },
+          {
+            "result": {
+              "duration": 3018519070,
+              "status": "passed"
+            },
+            "name": "I set the acceptance type as \"Customer ECAP\"",
+            "keyword": "And ",
+            "line": 104,
+            "match": {
+              "arguments": [
+                {
+                  "val": "Customer ECAP",
+                  "offset": 30
+                }
+              ],
+              "location": "OrderProcessSteps.I_set_the_acceptance_type_as(String)"
+            }
+          },
+          {
+            "result": {
+              "duration": 5343419496,
+              "status": "passed"
+            },
+            "name": "I upload an acceptance file \"Test.pdf\"",
+            "keyword": "And ",
+            "line": 105,
+            "match": {
+              "arguments": [
+                {
+                  "val": "Test.pdf",
+                  "offset": 29
+                }
+              ],
+              "location": "OrderProcessSteps.I_upload_an_acceptance_file(String)"
+            }
+          },
+          {
+            "result": {
+              "duration": 8739660311,
+              "status": "passed"
+            },
+            "name": "I accept this order",
+            "keyword": "And ",
+            "line": 106,
+            "match": {
+              "location": "OrderProcessSteps.I_accept_this_order()"
+            }
+          },
+          {
+            "result": {
+              "duration": 3174239324,
+              "status": "passed"
+            },
+            "name": "I submit this order",
+            "keyword": "And ",
+            "line": 108,
+            "match": {
+              "location": "OrderProcessSteps.I_submit_this_order()"
+            }
+          },
+          {
+            "result": {
+              "duration": 3155551644,
+              "status": "passed"
+            },
+            "name": "I click view order button",
+            "keyword": "And ",
+            "line": 110,
+            "match": {
+              "location": "OrderProcessSteps.I_click_view_order_button()"
+            }
+          },
+          {
+            "result": {
+              "duration": 3955088369,
+              "status": "passed"
+            },
+            "name": "I select the order provisioning tab",
+            "keyword": "And ",
+            "line": 111,
+            "match": {
+              "location": "OrderDetailSteps.I_select_the_order_provisioning_tab()"
+            }
+          },
+          {
+            "result": {
+              "duration": 11982995702,
+              "status": "passed"
+            },
+            "name": "I select all items in directory \"No Directory\" and classification \"Animal Health\"",
+            "keyword": "And ",
+            "line": 113,
+            "match": {
+              "arguments": [
+                {
+                  "val": "No Directory",
+                  "offset": 33
+                },
+                {
+                  "val": "Animal Health",
+                  "offset": 67
+                }
+              ],
+              "location": "OrderDetailSteps.I_select_all_items_in_directory_and_classification(String,String)"
+            },
+            "matchedColumns": [
+              2,
+              4
+            ]
+          },
+          {
+            "result": {
+              "duration": 4928101369,
+              "status": "passed"
+            },
+            "name": "I complete all selected items in order details",
+            "keyword": "And ",
+            "line": 114,
+            "match": {
+              "location": "OrderDetailSteps.I_complete_all_selected_items_in_order_details()"
+            }
+          },
+          {
+            "result": {
+              "duration": 330312004,
+              "status": "passed"
+            },
+            "name": "I verify the message \"This order was accepted using the ECAP process. A copy of the order has now been issued by email to the Customer and Sales Rep.\"",
+            "keyword": "And ",
+            "line": 115,
+            "match": {
+              "arguments": [
+                {
+                  "val": "This order was accepted using the ECAP process. A copy of the order has now been issued by email to the Customer and Sales Rep.",
+                  "offset": 22
+                }
+              ],
+              "location": "OrderProcessSteps.I_verify_the_message(String)"
+            }
+          }
+        ],
+        "type": "scenario"
+      }
+    ],
+    "uri": "nz/co/yellow/emerge/axle/reg/NewOrderPriceVerify.feature"
+  }
+]
