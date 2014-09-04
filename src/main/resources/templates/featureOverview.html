@@ -6,10 +6,10 @@
           body {
             background: #ECECE3;
           }
-          ul#feature_list {
+          ul {
             list-style: none;
           }
-          .feature_state {
+          .feature-index {
             background-color: #1A5748;
             color: white;
             float: left;
@@ -22,26 +22,57 @@
             text-align: center;
             overflow-wrap: break-word;
           }
-          .feature_info {
+          .feature-info {
             display: inline-block;
             padding-left: 5px;
             width: 640px;
           }
-          .feature_title {
+          .feature-title {
             background: #D4EC71;
             color: #1A5748;
             display: block;
             font-size: 20px;
             padding: 8px 5px 9px 5px;
           }
-          .feature_description {
+          .feature-description {
             display: block;
             font-size: 15px;
             color: #787878;
             padding: 5px;
             border-bottom: 1px solid #D6D6D6;
           }
-
+          .feature-result {
+            display: flex;
+            margin-left: 5px;
+            padding-left: 40px;
+          }
+          .scenario-result, .step-result {
+            padding: 5px 5px;
+            width: 310px;
+            font-family: sans-serif;
+            font-size: 13px;
+            font-style: italic;
+            display: flex;
+          }
+          .bar {
+            float: left;
+            position: relative;
+            padding: 2px 5px;
+            text-align: center;
+            display:block;
+          }
+          .passed {
+            background: #00AA00;
+            color: white;
+          }
+          .failed {
+            background: #DD0000;
+            color: white;
+          }
+          .skipped {
+            background: #0000DD;
+            color: white;
+          }
         </style>
     </head>
   <body>
@@ -49,12 +80,23 @@
       <div id="calendar"></div>
     </div>
     <div id="reportDetails">
-      <ul id="feature_list">
+      <ul id="feature-list">
         <li class="feature entry">
-          <em class="feature_state">12</em>
-          <div class="feature_info">
-            <span class="feature_title">Account Holder withdraws cash</span>
-            <i class="feature_description">As a Account Holder<br/>I want to withdraw cash from an ATM<br/>So that I can get money when the bank is closed</i>
+          <em class="feature-index">1</em>
+          <div class="feature-info">
+            <span class="feature-title">Account Holder withdraws cash</span>
+            <i class="feature-description">As a Account Holder<br/>I want to withdraw cash from an ATM<br/>So that I can get money when the bank is closed</i>
+          </div>
+          <div class="feature-result">
+            <div class="scenario-result">
+              <span class="bar passed" style="width: 150px">1 (50%)</span>
+              <span class="bar failed" style="width: 150px">1 (50%)</span>
+            </div>
+            <div class="step-result">
+              <span class="bar passed" style="width: 75px">21 (25%)</span>
+              <span class="bar failed" style="width: 7px">7</span>
+              <span class="bar skipped" style="width: 218px">61 (73%)</span>
+            </div>
           </div>
         </li>
       </ul>
