@@ -4,32 +4,27 @@
       <title>Cucumber Report</title>
         <style type="text/css">
           body {
-            background: #ECECE3;
+            background: #E7E7E7;
           }
           ul {
             list-style: none;
           }
-          .feature-index {
-            background-color: #1A5748;
-            color: white;
-            float: left;
-            width: 30px;
-            height: 30px;
-            padding: 10px 5px 0px 5px;
-            font-size: 16px;
-            font-weight: bold;
-            font-family: sans-serif;
-            text-align: center;
-            overflow-wrap: break-word;
+          li.feature {
+            width: 640px;
+            margin-bottom: 10px;
+          }
+          div.feature {
+            background: #143B32;
           }
           .feature-info {
+            background: #D8D8D4;
             display: inline-block;
-            padding-left: 5px;
-            width: 640px;
+            margin-left: 7px;
+            width: 633px;
           }
           .feature-title {
             background: #D4EC71;
-            color: #1A5748;
+            color: #143B32;
             display: block;
             font-size: 20px;
             padding: 8px 5px 9px 5px;
@@ -37,42 +32,75 @@
           .feature-description {
             display: block;
             font-size: 15px;
-            color: #787878;
+            color: #525252;
             padding: 5px;
             border-bottom: 1px solid #D6D6D6;
           }
           .feature-result {
-            display: flex;
             margin-left: 5px;
-            padding-left: 40px;
+            width: auto;
+          }
+          .feature-result-table {
+            font: 62.5%/1.6 "Droid Sans", Arial, Helvetica, sans-serif;
+            font-size: 11px;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 5px;
+          }
+          table {
+            border-spacing: 0px;
+          }
+          th, td {
+            padding: 0px 15px;
+            margin: 1px;
+          }
+          td.type {
+            background: white;
           }
           .scenario-result, .step-result {
             padding: 5px 5px;
-            width: 310px;
+            width: auto;
             font-family: sans-serif;
             font-size: 13px;
             font-style: italic;
             display: flex;
           }
-          .bar {
-            float: left;
-            position: relative;
+          .bar, .bar-title {
             padding: 2px 5px;
             text-align: center;
             display:block;
+            font: 62.5%/1.6 "Droid Sans", Arial, Helvetica, sans-serif;
+            font-weight: bold;
+            font-size: 11px;
+          }
+          .bar-title {
+            background: white;
+            color: #101010;
           }
           .passed {
-            background: #00AA00;
+            //background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.5, rgb(20,157,224)),color-stop(0.5, rgb(29,202,248)));
+            background: rgb(20,157,224);//rgb(52, 136, 46);
             color: white;
           }
           .failed {
-            background: #DD0000;
+            //background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.5, rgb(206,4,4)),color-stop(0.5, rgb(233,8,8)));
+            background: rgb(224, 52, 52);
             color: white;
           }
           .skipped {
-            background: #0000DD;
+            //background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.5, rgb(228, 228, 61)),color-stop(0.5, rgb(240, 247, 75)));
+            background: rgb(160, 160, 145);
             color: white;
           }
+          .pending {
+            //background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.5, rgb(228, 228, 61)),color-stop(0.5, rgb(240, 247, 75)));
+            background: rgb(228, 228, 61);
+            color: rgb(0, 92, 255);
+          }
+          .empty {
+            opacity: 0.2;
+          }
+
         </style>
     </head>
   <body>
@@ -82,23 +110,73 @@
     <div id="reportDetails">
       <ul id="feature-list">
         <li class="feature entry">
-          <em class="feature-index">1</em>
-          <div class="feature-info">
-            <span class="feature-title">Account Holder withdraws cash</span>
-            <i class="feature-description">As a Account Holder<br/>I want to withdraw cash from an ATM<br/>So that I can get money when the bank is closed</i>
-          </div>
-          <div class="feature-result">
-            <div class="scenario-result">
-              <span class="bar passed" style="width: 150px">1 (50%)</span>
-              <span class="bar failed" style="width: 150px">1 (50%)</span>
-            </div>
-            <div class="step-result">
-              <span class="bar passed" style="width: 75px">21 (25%)</span>
-              <span class="bar failed" style="width: 7px">7</span>
-              <span class="bar skipped" style="width: 218px">61 (73%)</span>
+          <div class="feature">
+            <div class="feature-info">
+              <span class="feature-title">Account Holder withdraws cash</span>
+              <i class="feature-description">As a Account Holder<br/>I want to withdraw cash from an ATM<br/>So that I can get money when the bank is closed</i>
+                <div class="feature-result">
+                  <table class="feature-result-table">
+                    <thead>
+                      <th></th>
+                      <th>Passed</th>
+                      <th>Failed</th>
+                      <th></th>
+                      <th>Passed</th>
+                      <th>Failed</th>
+                      <th>Skipped</th>
+                      <th>Pending</th>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td class="type">Scenario</td>
+                        <td class="passed">1</td>
+                        <td class="failed">1</td>
+                        <td class="type">Step</td>
+                        <td class="passed">21</td>
+                        <td class="failed">7</td>
+                        <td class="skipped">61</td>
+                        <td class="pending empty">0</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
             </div>
           </div>
         </li>
+          <li class="feature entry">
+              <div class="feature">
+                  <div class="feature-info">
+                      <span class="feature-title">Add New Products</span>
+                      <i class="feature-description">Add a new product in Axle and verify it whilst creating order</i>
+                      <div class="feature-result">
+                          <table class="feature-result-table">
+                              <thead>
+                              <th></th>
+                              <th>Passed</th>
+                              <th>Failed</th>
+                              <th></th>
+                              <th>Passed</th>
+                              <th>Failed</th>
+                              <th>Skipped</th>
+                              <th>Pending</th>
+                              </thead>
+                              <tbody>
+                              <tr>
+                                  <td class="type">Scenario</td>
+                                  <td class="passed">2</td>
+                                  <td class="failed empty">0</td>
+                                  <td class="type">Step</td>
+                                  <td class="passed">63</td>
+                                  <td class="failed empty">0</td>
+                                  <td class="skipped empty">0</td>
+                                  <td class="pending empty">0</td>
+                              </tr>
+                              </tbody>
+                          </table>
+                      </div>
+                  </div>
+              </div>
+          </li>
       </ul>
     </div>
   </body>
