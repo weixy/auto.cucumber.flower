@@ -53,7 +53,7 @@
             border-spacing: 0px;
           }
           th, td {
-            padding: 0px 15px;
+            padding: 0px 10px;
             margin: 1px;
           }
           td.type {
@@ -67,17 +67,9 @@
             font-style: italic;
             display: flex;
           }
-          .bar, .bar-title {
-            padding: 2px 5px;
-            text-align: center;
-            display:block;
-            font: 62.5%/1.6 "Droid Sans", Arial, Helvetica, sans-serif;
-            font-weight: bold;
-            font-size: 11px;
-          }
-          .bar-title {
-            background: white;
-            color: #101010;
+          .total {
+            background: #D6DFB4;
+            color: #555;
           }
           .passed {
             //background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.5, rgb(20,157,224)),color-stop(0.5, rgb(29,202,248)));
@@ -120,9 +112,11 @@
                   <table class="feature-result-table">
                     <thead>
                       <th></th>
+                      <th>Total</th>
                       <th>Passed</th>
                       <th>Failed</th>
                       <th></th>
+                      <th>Total</th>
                       <th>Passed</th>
                       <th>Failed</th>
                       <th>Skipped</th>
@@ -131,9 +125,11 @@
                     <tbody>
                       <tr>
                         <td class="type">Scenarios</td>
+                        <td class="total">2</td>
                         <td class="passed">1</td>
                         <td class="failed">1</td>
                         <td class="type">Steps</td>
+                        <td class="total">89</td>
                         <td class="passed">21</td>
                         <td class="failed">7</td>
                         <td class="skipped">61</td>
@@ -154,9 +150,11 @@
                           <table class="feature-result-table">
                               <thead>
                               <th></th>
+                              <th>Total</th>
                               <th>Passed</th>
                               <th>Failed</th>
                               <th></th>
+                              <th>Total</th>
                               <th>Passed</th>
                               <th>Failed</th>
                               <th>Skipped</th>
@@ -165,9 +163,11 @@
                               <tbody>
                               <tr>
                                   <td class="type">Scenarios</td>
+                                  <td class="total">2</td>
                                   <td class="passed">2</td>
                                   <td class="failed empty">0</td>
                                   <td class="type">Steps</td>
+                                  <td class="total">63</td>
                                   <td class="passed">63</td>
                                   <td class="failed empty">0</td>
                                   <td class="skipped empty">0</td>
