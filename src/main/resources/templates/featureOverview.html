@@ -1,185 +1,197 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Cucumber Report</title>
-        <style type="text/css">
-          body {
-            background: #E5E5E5;
-            font: 62.5% "Droid Sans", Arial, Helvetica, sans-serif;
-          }
-          ul {
-            list-style: none;
-          }
-          li.feature {
-            width: 640px;
-            margin-bottom: 15px;
-          }
-          div.feature {
-            //background: #143B32;
-          }
-          .feature-info {
-            background: #FFF;
-            display: inline-block;
-            margin-left: 7px;
-            width: 633px;
-          }
-          .feature-title {
-            color: #143B32;
-            display: block;
-            font-size: 14px;
-            font-weight: bold;
-            padding: 8px 5px 6px 10px;
-          }
-          .feature-description {
-            display: block;
-            font-size: 12px;
-            color: #999;
-            padding: 5px 0px;
-            margin: 0px 10px;
-            border-bottom: 1px dotted #D6D6D6;
-          }
-          .feature-result {
-            margin-top: 5px;
-            width: auto;
-          }
-          .feature-result-table {
-            font-size: 11px;
-            font-weight: bold;
-            text-align: center;
-            margin-bottom: 5px;
-            line-height: 1.6;
-          }
-          table {
-            border-spacing: 0px;
-          }
-          th, td {
-            padding: 0px 10px;
-            margin: 1px;
-          }
-          td.type {
-            background: white;
-          }
-          .scenario-result, .step-result {
-            padding: 5px 5px;
-            width: auto;
-            font-family: sans-serif;
-            font-size: 13px;
-            font-style: italic;
-            display: flex;
-          }
-          .total {
-            background: #D6DFB4;
-            color: #555;
-          }
-          .passed {
-            //background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.5, rgb(20,157,224)),color-stop(0.5, rgb(29,202,248)));
-            background: rgb(20,157,224);//rgb(52, 136, 46);
-            color: white;
-          }
-          .failed {
-            //background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.5, rgb(206,4,4)),color-stop(0.5, rgb(233,8,8)));
-            background: #d73d32;
-            color: white;
-          }
-          .skipped {
-            //background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.5, rgb(228, 228, 61)),color-stop(0.5, rgb(240, 247, 75)));
-            background: rgb(160, 160, 145);
-            color: white;
-          }
-          .pending {
-            //background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.5, rgb(228, 228, 61)),color-stop(0.5, rgb(240, 247, 75)));
-            background: rgb(228, 228, 61);
-            color: rgb(0, 92, 255);
-          }
-          .empty {
-            opacity: 0.2;
-          }
+<head>
+    <title>Cucumber Report</title>
+    <style type="text/css">
+        body {
+        background: #E5E5E5;
+        font: 62.5% "Droid Sans", Arial, Helvetica, sans-serif;
+        }
+        ul {
+        list-style: none;
+        }
+        li.feature {
+        width: 640px;
+        margin-bottom: 15px;
+        }
+        div.feature {
+        //background: #143B32;
+        }
+        .feature-info {
+        background: #FFF;
+        display: inline-block;
+        margin-left: 7px;
+        width: 633px;
+        }
+        .feature-title {
+        color: #143B32;
+        display: block;
+        font-size: 14px;
+        font-weight: bold;
+        padding: 8px 5px 6px 10px;
+        }
+        .feature-description {
+        display: block;
+        font-size: 12px;
+        color: #999;
+        padding: 5px 0px;
+        margin: 0px 10px;
+        border-bottom: 1px dotted #D6D6D6;
+        }
+        .feature-result {
+        margin-top: 5px;
+        width: auto;
+        }
+        .feature-result-table {
+        font-size: 11px;
+        font-weight: bold;
+        text-align: center;
+        margin-bottom: 5px;
+        line-height: 1.6;
+        }
+        table {
+        border-spacing: 0px;
+        }
+        th, td {
+        padding: 0px 10px;
+        margin: 1px;
+        }
+        td.type {
+        background: white;
+        }
+        .scenario-result, .step-result {
+        padding: 5px 5px;
+        width: auto;
+        font-family: sans-serif;
+        font-size: 13px;
+        font-style: italic;
+        display: flex;
+        }
+        .total {
+        background: #D6DFB4;
+        color: #555;
+        }
+        .passed {
+        //background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.5, rgb(20,157,224)),color-stop(0.5, rgb(29,202,248)));
+        background: rgb(20,157,224);//rgb(52, 136, 46);
+        color: white;
+        }
+        .failed {
+        //background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.5, rgb(206,4,4)),color-stop(0.5, rgb(233,8,8)));
+        background: #d73d32;
+        color: white;
+        }
+        .skipped {
+        //background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.5, rgb(228, 228, 61)),color-stop(0.5, rgb(240, 247, 75)));
+        background: rgb(160, 160, 145);
+        color: white;
+        }
+        .pending {
+        //background-image: -webkit-gradient(linear,left bottom,left top,color-stop(0.5, rgb(228, 228, 61)),color-stop(0.5, rgb(240, 247, 75)));
+        background: rgb(228, 228, 61);
+        color: rgb(0, 92, 255);
+        }
+        .empty {
+        opacity: 0.2;
+        }
+        .scenario-result {
+            background: #f5f5f5;
+        }
 
-        </style>
-    </head>
-  <body>
-    <div id="reportOverview">
-      <div id="calendar"></div>
-    </div>
-    <div id="reportDetails">
-      <ul id="feature-list">
+    </style>
+    <script language="JavaScript">
+        function toggle() {
+            var toggle = document.getElementByClass("scenario-result");
+        }
+    </script>
+</head>
+<body>
+<div id="reportOverview">
+    <div id="calendar"></div>
+</div>
+<div id="reportDetails">
+    <ul id="feature-list">
         <li class="feature entry">
-          <div class="feature">
-            <div class="feature-info">
-              <span class="feature-title">Account Holder withdraws cash</span>
-              <i class="feature-description">As a Account Holder<br/>I want to withdraw cash from an ATM<br/>So that I can get money when the bank is closed</i>
-                <div class="feature-result">
-                  <table class="feature-result-table">
-                    <thead>
-                      <th></th>
-                      <th>Total</th>
-                      <th>Passed</th>
-                      <th>Failed</th>
-                      <th></th>
-                      <th>Total</th>
-                      <th>Passed</th>
-                      <th>Failed</th>
-                      <th>Skipped</th>
-                      <th>Pending</th>
-                    </thead>
-                    <tbody>
-                      <tr>
-                        <td class="type">Scenarios</td>
-                        <td class="total">2</td>
-                        <td class="passed">1</td>
-                        <td class="failed">1</td>
-                        <td class="type">Steps</td>
-                        <td class="total">89</td>
-                        <td class="passed">21</td>
-                        <td class="failed">7</td>
-                        <td class="skipped">61</td>
-                        <td class="pending empty">0</td>
-                      </tr>
-                    </tbody>
-                  </table>
+            <div class="feature">
+                <div class="feature-info">
+                    <span class="feature-title">Account Holder withdraws cash</span>
+                    <i class="feature-description">As a Account Holder<br/>I want to withdraw cash from an ATM<br/>So that I can get money when the bank is closed</i>
+                    <div class="feature-result">
+                        <table class="feature-result-table">
+                            <thead>
+                            <th></th>
+                            <th>Total</th>
+                            <th>Passed</th>
+                            <th>Failed</th>
+                            <th></th>
+                            <th>Total</th>
+                            <th>Passed</th>
+                            <th>Failed</th>
+                            <th>Skipped</th>
+                            <th>Pending</th>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="type">Scenarios</td>
+                                <td class="total">2</td>
+                                <td class="passed">1</td>
+                                <td class="failed">1</td>
+                                <td class="type">Steps</td>
+                                <td class="total">89</td>
+                                <td class="passed">21</td>
+                                <td class="failed">7</td>
+                                <td class="skipped">61</td>
+                                <td class="pending empty">0</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="scenario-result">
+                        <a class="toggle-result"> >>> </a>
+                        <div class="steps"></div>
+                    </div>
                 </div>
             </div>
-          </div>
         </li>
-          <li class="feature entry">
-              <div class="feature">
-                  <div class="feature-info">
-                      <span class="feature-title">Add New Products</span>
-                      <i class="feature-description">Add a new product in Axle and verify it whilst creating order</i>
-                      <div class="feature-result">
-                          <table class="feature-result-table">
-                              <thead>
-                              <th></th>
-                              <th>Total</th>
-                              <th>Passed</th>
-                              <th>Failed</th>
-                              <th></th>
-                              <th>Total</th>
-                              <th>Passed</th>
-                              <th>Failed</th>
-                              <th>Skipped</th>
-                              <th>Pending</th>
-                              </thead>
-                              <tbody>
-                              <tr>
-                                  <td class="type">Scenarios</td>
-                                  <td class="total">2</td>
-                                  <td class="passed">2</td>
-                                  <td class="failed empty">0</td>
-                                  <td class="type">Steps</td>
-                                  <td class="total">63</td>
-                                  <td class="passed">63</td>
-                                  <td class="failed empty">0</td>
-                                  <td class="skipped empty">0</td>
-                                  <td class="pending empty">0</td>
-                              </tr>
-                              </tbody>
-                          </table>
-                      </div>
-                  </div>
-              </div>
-          </li>
-      </ul>
-    </div>
-  </body>
+        <li class="feature entry">
+            <div class="feature">
+                <div class="feature-info">
+                    <span class="feature-title">Add New Products</span>
+                    <i class="feature-description">Add a new product in Axle and verify it whilst creating order</i>
+                    <div class="feature-result">
+                        <table class="feature-result-table">
+                            <thead>
+                            <th></th>
+                            <th>Total</th>
+                            <th>Passed</th>
+                            <th>Failed</th>
+                            <th></th>
+                            <th>Total</th>
+                            <th>Passed</th>
+                            <th>Failed</th>
+                            <th>Skipped</th>
+                            <th>Pending</th>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td class="type">Scenarios</td>
+                                <td class="total">2</td>
+                                <td class="passed">2</td>
+                                <td class="failed empty">0</td>
+                                <td class="type">Steps</td>
+                                <td class="total">63</td>
+                                <td class="passed">63</td>
+                                <td class="failed empty">0</td>
+                                <td class="skipped empty">0</td>
+                                <td class="pending empty">0</td>
+                            </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </li>
+    </ul>
+</div>
+</body>
 </html>
