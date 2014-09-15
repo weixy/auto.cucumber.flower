@@ -94,11 +94,10 @@
         .empty {
         opacity: 0.2;
         }
-        .scenario-detail {
+        panel {
             background: #f5f5f5;
-            padding: 5px 0px;
-            margin: 0px 10px;
-            border-bottom: 1px dotted #D6D6D6;
+            padding: 5px 10px;
+            font: 11px "Droid Sans", Arial, Helvetica, sans-serif
         }
         panel.visible {
             display: block;
@@ -115,10 +114,10 @@
             var fieldClass = field.className;
             if (fieldClass.indexOf('hidden') > -1) {
                 field.className = fieldClass.replace('hidden', 'visible');
-                tog.innerHTML = tog.innerHTML.replace('+', '-');
+                //tog.innerHTML = tog.innerHTML.replace('+', '-');
             } else if (fieldClass.indexOf('visible') > -1) {
                 field.className = fieldClass.replace('visible', 'hidden');
-                tog.innerHTML = tog.innerHTML.replace('-', '+');
+                //tog.innerHTML = tog.innerHTML.replace('-', '+');
             }
         }
     </script>
@@ -134,7 +133,7 @@
                 <div class="feature-info">
                     <span class="feature-title">Account Holder withdraws cash</span>
                     <i class="feature-description">As a Account Holder<br/>I want to withdraw cash from an ATM<br/>So that I can get money when the bank is closed</i>
-                    <div class="feature-result">
+                    <div class="feature-result" onclick="toggle(this, 'scenario01');">
                         <table class="feature-result-table">
                             <thead>
                             <th></th>
@@ -165,8 +164,19 @@
                         </table>
                     </div>
                     <div class="scenario-detail">
-                        <div class="toggle" onclick="toggle(this, 'scenario01');">[+]</div>
-                        <panel id="scenario01" class="steps hidden"></panel>
+                        <panel id="scenario01" class="steps hidden">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Given</td>
+                                        <td>That I am logged into Axle</td>
+                                        <td>Passed</td>
+                                        <td>11sec 27ms</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </panel>
                     </div>
                 </div>
             </div>
@@ -207,7 +217,6 @@
                         </table>
                     </div>
                     <div class="scenario-detail">
-                        <div class="toggle" onclick="toggle(this, 'scenario02');">[+]</div>
                         <panel id="scenario02" class="steps hidden"></panel>
                     </div>
                 </div>
